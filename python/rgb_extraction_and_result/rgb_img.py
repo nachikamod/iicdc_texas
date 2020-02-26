@@ -3,7 +3,7 @@ import time
 from PIL import Image
 import cv2 
 
-dir = "D:\\workspace\\python\\vscode\\file_opener\\test_dir"
+dir = "D:\\workspace\\python\\vscode\\file_opener\\test_dir"  #change directory to your required location where images are stored
 
 files = os.listdir(dir)
 
@@ -34,6 +34,10 @@ for x in files:
                     if int(rgb_dump[0]) in range(150,256) and int(rgb_dump[1]) in range(150,256) and int(rgb_dump[2]) in range(-1,56):
                         print("Yellow found")
 
+                        
+                        
+    #Manual rgb ret and calc
+    
     #u_pix1 = pix[(im_height/2)-1,(im_width/2)+1]
     #print(u_pix1)
     #u_pix2 = pix[(im_height/2)-1,(im_width)/2]
