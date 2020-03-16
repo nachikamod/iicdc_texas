@@ -79,6 +79,7 @@ void loop() {
           client.println("<!DOCTYPE HTML>");
           client.println("<html>");
           client.println("<head>");
+          //Intigration of firebase to website see the firebase web documentation
           client.println("<script src='https://www.gstatic.com/firebasejs/7.11.0/firebase-app.js'></script>");
           client.println("<script src='https://www.gstatic.com/firebasejs/7.11.0/firebase-analytics.js'></script>");
           client.println("<script src='https://www.gstatic.com/firebasejs/7.11.0/firebase-database.js'></script>");
