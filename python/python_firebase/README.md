@@ -1,4 +1,4 @@
-##Installing firebase
+##Installing firebase##
 
 Before using firebase functions in any of the program you need to install firebase libraries using pip
 
