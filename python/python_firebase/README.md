@@ -2,7 +2,7 @@
 
 Before using firebase functions in any of the program you need to install firebase libraries using pip
 
-So first of all run command in your shell or terminal or command promp (cmd)
+So first of all run this commands in your shell or terminal or command promp (cmd)
 
 ```
   pip install requests
@@ -26,7 +26,9 @@ SyntaxError: invalid syntax
 
 ```
 
-Follow below steps - open your **c drive** 
+Follow steps given below
+
++ open your **c drive** 
 
 ```
 
@@ -34,13 +36,14 @@ Follow below steps - open your **c drive**
   
 ```
 
-Now on this step you might not found the AppData folder cause it's hidden,
-to turn on visibility of this folder, in the toolbar **click View**
+Now on this step you might not found the AppData folder cause it's hidden
 
-on right hand side there are three vertical check boxes **Tick Hidden Items**
++ To turn on visibility of this folder, in file manager go to toolbar **click View**
+ 
++ on right hand side there are three vertical check boxes **Tick "Hidden Items"**
 
-after this step you will be able to see AppData folder
- again follow the directory (dir) given below
+After this step you will be able to see AppData folder.
+again follow the directory (dir) given below.
  
 ```
 
@@ -48,13 +51,15 @@ after this step you will be able to see AppData folder
    
 ```
 
-here you will see **async.py** file rename it to **async_.py**
++ Here you will see "**async.py**" file rename it to "**async_.py**"
 
-after this renaming, **open __init__.py**  on third line **from .async import process_pool** change this line to
++ After renaming, **open "__init__.py"**, on third line "**from .async import process_pool**" change this import to
 
-**from .async_ import process_pool** then open firebase.py and repeat the step on 12th line as well.
+"**from .async_ import process_pool**"
 
-An thats it you are ready to go with firebase
++ Now open firebase.py and repeat the same step on 12th line as well.
+
+And thats it !! you are ready to go with firebase
 
 **Note : if async.py file is not there, you might find file named process_pool.py that means you are getting some different error 
 taht means time to get help from google or else me ... LOL**
