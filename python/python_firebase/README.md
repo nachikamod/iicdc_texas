@@ -62,4 +62,4 @@ again follow the directory (dir) given below.
 And thats it !! you are ready to go with firebase
 
 **Note : if async.py file is not there, you might find file named process_pool.py that means you are getting some different error 
-taht means time to get help from google or else me ... LOL**
+that means time to get help from google or else me ... LOL**
