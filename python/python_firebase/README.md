@@ -14,7 +14,7 @@ and thats it now you just need to import firebase from firebase package and read
 
 http://ozgur.github.io/python-firebase/
 
-##Note : only follow this commands if you get any errors while compiling
+## Note : only follow this commands if you get any errors while compiling
 
 While compiling applications you might get some error like this shown below
 
