@@ -16,7 +16,7 @@ for x in files:
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER , 10, 1.0)   #criteria for stopping the calcs 
 
     k = 5                                                                     #no. of clusters to be formed                                                               
-    attempts = 10                                                              
+    attempts = 10                                                              #no. of times the algo is executed
     ret, label, center = cv2.kmeans(img2,k,None, criteria, attempts, cv2.KMEANS_PP_CENTERS)
 
     center = np.uint8(center)
