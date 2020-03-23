@@ -108,3 +108,9 @@ def find_leaf(img):
      bgr = cv2.cvtColor(circled,cv2.COLOR_RGB)
      return bgr
 
+    
+    #time to call
+dir = "D:\\workspace\\python\\vscode\\file_opener\\test_dir"  #change directory to your required location where images are stored
+files = os.listdir(dir)
+for x in files:
+     
