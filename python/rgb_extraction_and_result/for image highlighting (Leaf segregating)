@@ -113,4 +113,6 @@ def find_leaf(img):
 dir = "D:\\workspace\\python\\vscode\\file_opener\\test_dir"  #change directory to your required location where images are stored
 files = os.listdir(dir)
 for x in files:
+    im = Image.open(dir + "\\" + x)
+    find_leaf(im)
      
