@@ -64,11 +64,6 @@ dir = "D:/workspace/python/github/iicdc_texas/python/rgb_extraction_and_result/d
   
 files = os.listdir(dir)
 for x in files:
-    
-    print()
-    print()
-    print(x)
-    
     find_leaf(kmean_preprocessing(dir + '/' + x), x)
     
 
