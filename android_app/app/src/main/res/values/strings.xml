@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Shining Stars</string>
+    <string name="cancel">cancel</string>
+    <string name="action_settings">settings</string>
 </resources>

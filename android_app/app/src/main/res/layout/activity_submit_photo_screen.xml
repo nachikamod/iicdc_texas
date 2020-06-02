@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".submitPhotoScreen"
+    android:background="#1E1E1E">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/cap_img"
+                    android:padding="100dp"
+                    android:background="#3C3C3C"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_photo"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"/>
+
+                    <ImageView
+                        android:elevation="2dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/loc_layout"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/cap_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:backgroundTint="#333333"
+                        app:cardCornerRadius="10dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <RelativeLayout
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:layout_centerVertical="true"
+                                android:id="@+id/loc_ico"
+                                android:src="@drawable/ic_location"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"/>
+
+                            <TextView
+                                android:id="@+id/location_city"
+                                android:layout_marginLeft="5dp"
+                                android:textSize="20sp"
+                                android:textColor="#FFFFFF"
+                                android:layout_toEndOf="@id/loc_ico"
+                                android:text="Current Location"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@id/loc_ico"
+                                android:layout_marginStart="5dp" />
+
+                        </RelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </RelativeLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/crop_type"
+                    android:background="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/loc_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:padding="10dp"
+                            android:id="@+id/type"
+                            android:textColor="#000000"
+                            android:text="Select type of crop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:padding="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/type_other"
+                    android:background="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/crop_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/toc_other"
+                            android:text="Type of crop (other)"
+                            android:textColor="#000000"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:padding="10dp"
+                            android:id="@+id/toc_edt"
+                            android:layout_below="@+id/toc_other"
+                            android:hint="Other"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/d_type"
+                    android:background="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/type_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:padding="10dp"
+                            android:id="@+id/tod"
+                            android:textColor="#000000"
+                            android:text="Select type of disease or healthy"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:padding="10dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_below="@+id/tod"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:visibility="gone"
+                    android:id="@+id/type_dsz_other"
+                    android:background="#FFFFFF"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/d_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tod_other"
+                            android:text="Type of disease (other)"
+                            android:textColor="#000000"
+                            android:padding="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <EditText
+                            android:padding="10dp"
+                            android:id="@+id/tod_edt"
+                            android:layout_below="@+id/tod_other"
+                            android:hint="Other"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"/>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <Button
+                    android:id="@+id/submit_data"
+                    android:elevation="2dp"
+                    android:background="@drawable/custom_button"
+                    android:textColor="#FFFFFF"
+                    android:text="Submit"
+                    android:layout_margin="10dp"
+                    android:layout_below="@+id/type_dsz_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
