@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        Intent loginIntent = new Intent(this, submitPhotoScreen.class);
+        Intent loginIntent = new Intent(this, leaderBoardScreen.class);
         startActivity(loginIntent);
         finish();
     }
