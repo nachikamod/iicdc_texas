@@ -1,0 +1,50 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.title-attr {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.title-attr h1{
+  color: #626262;
+}
+
+.total-photos {
+  width: 100%;
+  background-color: #252526;
+  text-align: center;
+  border-radius: 0.5vw;
+  box-shadow: 3px 3px 5px #131313;
+}
+
+.total-photos h4{
+  color: white;
+  padding-top: 1vw;
+  font-size: 4vw;
+}
+
+.total-photos img{
+  height: 3vw;
+  margin-top: 1vw;
+}
+
+.total-photos p{
+  color: white;
+  padding: 1vw 0 2vw 0;
+}
+
+.stat-graph {
+  margin-top: 0.3vw;
+  margin-bottom: 1vw;
+}
+
+.graph{
+  width: 100%;
+  background-color: #252526;
+  text-align: center;
+  border-radius: 0.5vw;
+  box-shadow: 3px 3px 5px #131313;
+}
