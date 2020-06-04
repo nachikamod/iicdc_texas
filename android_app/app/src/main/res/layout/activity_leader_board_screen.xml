@@ -33,7 +33,7 @@
 
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_below="@+id/leader_board"
-                    android:layout_marginTop="20sp"
+                    android:layout_marginTop="20dp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/profile_image"
                     android:layout_width="96dp"

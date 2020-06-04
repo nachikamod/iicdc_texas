@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "70340898763",
+    "firebase_url": "https://iicdc-texas.firebaseio.com",
+    "project_id": "iicdc-texas",
+    "storage_bucket": "iicdc-texas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:70340898763:android:9ea543782b875355ea104e",
+        "android_client_info": {
+          "package_name": "com.iicdc.shiningstars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "70340898763-mdkfemitvlsuf7lhb6iiq2unmvrav9ma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iicdc.shiningstars",
+            "certificate_hash": "b6dde362056c0a534f3a04d08456927a423c3bee"
+          }
+        },
+        {
+          "client_id": "70340898763-56tbfigkqkcfc8th9o1urb4c2bn8ti4r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBTDCpFRrkxUjK65HWkqp8Y-fbeBv8c2w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "70340898763-56tbfigkqkcfc8th9o1urb4c2bn8ti4r.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
