@@ -7,7 +7,6 @@
     tools:context=".profileCreationScreen"
     android:background="#1E1E1E">
 
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +22,7 @@
                 android:layout_height="wrap_content">
 
                 <de.hdodenhof.circleimageview.CircleImageView
+                    android:clickable="true"
                     android:layout_marginTop="50dp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/profile_image"
@@ -30,8 +30,9 @@
                     android:layout_height="150dp"
                     android:src="@drawable/profile"
                     app:civ_border_width="2dp"
-                    app:civ_border_color="#FFFFFF"/>
-                
+                    app:civ_border_color="#FFFFFF"
+                    android:focusable="true" />
+
                 <TextView
                     android:layout_marginLeft="5dp"
                     android:textColor="#FFFFFF"
@@ -102,6 +103,7 @@
                             android:layout_height="wrap_content"/>
 
                         <Spinner
+                            android:id="@+id/language"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_below="@+id/lang"
@@ -117,11 +119,50 @@
 
                 </androidx.cardview.widget.CardView>
 
+                <androidx.cardview.widget.CardView
+                    app:cardCornerRadius="10dp"
+                    android:id="@+id/loc_card"
+                    android:layout_marginTop="30sp"
+                    android:layout_below="@+id/language_spinner"
+                    android:background="#FFFFFF"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/location_txt"
+                            android:textColor="#000000"
+                            android:padding="10dp"
+                            android:text="Location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <Spinner
+                            android:id="@+id/location_spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/location_txt"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginEnd="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="10dp"/>
+
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
                 <Button
+                    android:id="@+id/submit_prof"
                     android:textColor="#FFFFFF"
                     android:text="Submit"
-                    android:layout_marginTop="50dp"
-                    android:layout_below="@+id/language_spinner"
+                    android:layout_marginTop="30dp"
+                    android:layout_below="@+id/loc_card"
                     android:background="@drawable/custom_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

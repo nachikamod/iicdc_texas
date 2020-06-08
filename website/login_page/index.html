@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Shining Stars</title>
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/shining-stars-92878.appspot.com/o/shining-stars%2Fweb-iframe%2Flogin-page%2Fstyle.css?alt=media&token=49960d40-2069-4332-82ff-c5ff8b6622ad">
+
+    <!--CDN Libraries-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.0/firebase-auth.js"></script>
+
+    <!--Local libraries-->
+    <script src="https://firebasestorage.googleapis.com/v0/b/shining-stars-92878.appspot.com/o/shining-stars%2Fweb-iframe%2Flogin-page%2Flogin.js?alt=media&token=e88a091d-c188-4489-ae10-633bafab5cd4"></script>
+
+  </head>
+  <body>
+
+    <div class="center-data">
+      <h1>✨✨Shining Stars✨✨</h1>
+
+      <div class="form__group field">
+        <input type="email" class="form__field" placeholder="Email" name="Email" id='email' required />
+        <label for="Email" class="form__label">Email</label>
+      </div>
+
+      <div class="form__group field">
+        <input type="password" class="form__field" placeholder="Password" name="Password" id='password' required />
+        <label for="Password" class="form__label">Password</label>
+      </div>
+
+      <div class="container log-div">
+        <button type="button" name="button" onclick="login()">Login</button>
+      </div>
+
+    </div>
+
+  </body>
+</html>

@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +16,11 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,11 +39,46 @@ public class loginScreen extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
+    private FirebaseUser currUser;
+
+    //Firebase database call
+    private DatabaseReference createUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_screen);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        //Initialize objects
+        initFields();
+
+
+        //On click listeners
+        clickListeners();
+    }
+
+    private void initFields() {
+
+        //EditText plugin from layout
+        mNum = findViewById(R.id.m_num);
+        mOTP = findViewById(R.id.otp);
+
+        //Buttons plugin form layout
+        vrf = findViewById(R.id.verify);
+        sub = findViewById(R.id.submit);
+
+        //Initializing firebase authentication
+        mAuth = FirebaseAuth.getInstance();
+
+        //loading bar while authentication process
+        loadingBar = new ProgressDialog(loginScreen.this);
+
+        createUser = FirebaseDatabase.getInstance().getReference().child("shining-stars").child("users");
 
     }
 
@@ -135,6 +174,9 @@ public class loginScreen extends AppCompatActivity {
             @Override
             public void onCodeSent(@NonNull String verificationId,
                                    @NonNull PhoneAuthProvider.ForceResendingToken token) {
+
+                loadingBar.dismiss();
+
                 mVerificationID = verificationId;
                 mResendToken = token;
 
@@ -160,6 +202,28 @@ public class loginScreen extends AppCompatActivity {
 
                             loadingBar.dismiss();
 
+                            loadingBar.setTitle("User creation");
+                            loadingBar.setMessage("Creating user please wait...");
+                            loadingBar.setCanceledOnTouchOutside(false);
+                            loadingBar.show();
+
+                            currUser = mAuth.getCurrentUser();
+
+
+                            createUser.child(currUser.getUid()).setValue("").addOnCompleteListener(new OnCompleteListener<Void>() {
+                                @Override
+                                public void onComplete(@NonNull Task<Void> task) {
+
+                                    loadingBar.dismiss();
+                                    Intent _mainActivity = new Intent(loginScreen.this, MainActivity.class);
+                                    _mainActivity.putExtra("splash", true);
+                                    startActivity(_mainActivity);
+                                    finish();
+                                }
+                            });
+
+
+
                         } else {
 
                             Toast.makeText(loginScreen.this, "" + task.getException().toString(), Toast.LENGTH_SHORT).show();
@@ -176,35 +240,5 @@ public class loginScreen extends AppCompatActivity {
                         }
                     }
                 });
-    }
-
-    private void initFields() {
-
-        //EditText plugin from layout
-        mNum = findViewById(R.id.m_num);
-        mOTP = findViewById(R.id.otp);
-
-        //Buttons plugin form layout
-        vrf = findViewById(R.id.verify);
-        sub = findViewById(R.id.submit);
-
-        //Initializing firebase authentication
-        mAuth = FirebaseAuth.getInstance();
-
-        //loading bar while authentication process
-        loadingBar = new ProgressDialog(loginScreen.this);
-
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-
-        //Initialize objects
-        initFields();
-
-
-        //On click listeners
-        clickListeners();
     }
 }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "892344256821",
+    "firebase_url": "https://shining-stars-92878.firebaseio.com",
+    "project_id": "shining-stars-92878",
+    "storage_bucket": "shining-stars-92878.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:892344256821:android:66863e79101f6f6cba247c",
+        "android_client_info": {
+          "package_name": "com.iicdc.shiningstars"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "892344256821-akl1gq3jmh93kr6hohm74oc57hq3l7eg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iicdc.shiningstars",
+            "certificate_hash": "b6dde362056c0a534f3a04d08456927a423c3bee"
+          }
+        },
+        {
+          "client_id": "892344256821-pelhcrhsbn705434i8ktcjetoh138t01.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqOU6ESOya7aoFuX7HqjoxOKxyy4hYvVE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "892344256821-pelhcrhsbn705434i8ktcjetoh138t01.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

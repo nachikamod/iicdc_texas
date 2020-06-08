@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "70340898763",
-    "firebase_url": "https://iicdc-texas.firebaseio.com",
-    "project_id": "iicdc-texas",
-    "storage_bucket": "iicdc-texas.appspot.com"
+    "project_number": "892344256821",
+    "firebase_url": "https://shining-stars-92878.firebaseio.com",
+    "project_id": "shining-stars-92878",
+    "storage_bucket": "shining-stars-92878.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:70340898763:android:9ea543782b875355ea104e",
+        "mobilesdk_app_id": "1:892344256821:android:66863e79101f6f6cba247c",
         "android_client_info": {
           "package_name": "com.iicdc.shiningstars"
         }
       },
       "oauth_client": [
         {
-          "client_id": "70340898763-mdkfemitvlsuf7lhb6iiq2unmvrav9ma.apps.googleusercontent.com",
+          "client_id": "892344256821-akl1gq3jmh93kr6hohm74oc57hq3l7eg.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.iicdc.shiningstars",
@@ -23,20 +23,20 @@
           }
         },
         {
-          "client_id": "70340898763-56tbfigkqkcfc8th9o1urb4c2bn8ti4r.apps.googleusercontent.com",
+          "client_id": "892344256821-pelhcrhsbn705434i8ktcjetoh138t01.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBBTDCpFRrkxUjK65HWkqp8Y-fbeBv8c2w"
+          "current_key": "AIzaSyBqOU6ESOya7aoFuX7HqjoxOKxyy4hYvVE"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "70340898763-56tbfigkqkcfc8th9o1urb4c2bn8ti4r.apps.googleusercontent.com",
+              "client_id": "892344256821-pelhcrhsbn705434i8ktcjetoh138t01.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
